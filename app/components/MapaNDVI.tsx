@@ -19,7 +19,9 @@ const BASES = {
   },
 };
 
-function esquinas(b: number[]): [number, number][] {
+type Esquinas = [[number, number], [number, number], [number, number], [number, number]];
+
+function esquinas(b: number[]): Esquinas {
   const [minLon, minLat, maxLon, maxLat] = b;
   return [
     [minLon, maxLat],
